@@ -1,0 +1,70 @@
+-------------------------------------------------------------------------------
+Python-Skript ausführen:
+python3 <PYTHON.PY-DATEI>
+
+Einzeiler ausführen, zum Beispiel numpy:
+python3 -c "import numpy as np; print(np.__version__)"
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Paketverwaltung mit pip
+
+pip installieren:
+sudo apt install python3-pip
+
+pip selbst aktualisieren:
+python3 -m pip install --upgrade pip
+
+Installation mittels:
+pip install <PAKET>
+
+Anzeigen der installierten Pakete:
+pip list
+
+Paket aktualisieren, zum Beispiel jupyterlab:
+pip install --upgrade jupyterlab
+
+Bei der Deinstallation mittels
+pip uninstall <PAKET>
+werden Pakete, welche nur wegen Abhängigkeit installiert wurden, NICHT mitentfernt.
+Verwende daher pip-autoremove:
+pip-autoremove <PAKET>
+
+Installation von pip-autoremove:
+pip install pip-autoremove
+
+pip cache leeren mittels:
+pip cache purge
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Virtuelle Umgebung
+
+Erzeugung:
+python -m venv /path/to/directory
+Damit wird eine virtuelle Python-Umgebung im angegebenen Ordner erstellt.
+
+Aktivierung:
+source /path/to/directory/bin/activate
+Danach steht im Prompt zB: (myenv) user@host:~$
+
+Installation von Paketen in virtueller Umgebung mittels:
+pip install <PAKETE>
+
+Deaktivierung:
+deactivate
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+PyTorch
+
+Installation inklusive CUDA:
+pip install torch torchvision torchaudio
+
+Installation für der CPU-Version, siehe
+https://pytorch.org/get-started/locally/ :
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+-------------------------------------------------------------------------------
