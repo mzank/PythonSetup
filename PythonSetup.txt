@@ -1,5 +1,5 @@
 SPDX-License-Identifier: Apache-2.0
-Copyright (c) 2025 Marco Zank
+Copyright (c) 2026 Marco Zank
 
 -------------------------------------------------------------------------------
 Python-Skript ausführen:
@@ -43,6 +43,9 @@ pip cache purge
 Installation eines Pakets in einen Ordner, wobei Abhängigkeiten aufgelöst werden.
 Die installierten Pakete landen nicht im Standard-Python-Pfad site-packages und stören daher die Standard-Python-Umgebung nicht. 
 pip install -t <ORDNER> <PAKETE>
+
+Das Python‑Projekt im aktuellen Verzeichnis (der Punkt .) im Entwickler‑Modus installieren:
+pip install -e .
 
 Umgebungsvariable setzen, damit meinOrdner für Python verfügbar ist:
 export PYTHONPATH="$HOME/meinOrdner:$PYTHONPATH"
