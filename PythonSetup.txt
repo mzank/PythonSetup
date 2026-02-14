@@ -39,6 +39,16 @@ pip install pip-autoremove
 
 pip cache leeren mittels:
 pip cache purge
+
+Installation eines Pakets in einen Ordner, wobei Abhängigkeiten aufgelöst werden.
+Die installierten Pakete landen nicht im Standard-Python-Pfad site-packages und stören daher die Standard-Python-Umgebung nicht. 
+pip install -t <ORDNER> <PAKETE>
+
+Umgebungsvariable setzen, damit meinOrdner für Python verfügbar ist:
+export PYTHONPATH="$HOME/meinOrdner:$PYTHONPATH"
+
+Sauberer mit Bash-Parameterexpansion (Hänge :$PYTHONPATH nur an, wenn PYTHONPATH bereits existiert.):
+export PYTHONPATH="$HOME/meinOrdner${PYTHONPATH:+:$PYTHONPATH}"
 -------------------------------------------------------------------------------
 
 
@@ -46,7 +56,7 @@ pip cache purge
 Virtuelle Umgebung
 
 Erzeugung:
-python -m venv /path/to/directory
+python3 -m venv /path/to/directory
 Damit wird eine virtuelle Python-Umgebung im angegebenen Ordner erstellt.
 
 Aktivierung:
