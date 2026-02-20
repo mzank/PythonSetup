@@ -79,17 +79,29 @@ deactivate
 -------------------------------------------------------------------------------
 Jupyter: https://jupyter.org/
 
+Jupyter Notebook installieren/aktualisieren:
+pip install --upgrade notebook
+
+Jupyter Notebook starten:
+jupyter notebook
+
 JupyterLab installieren/aktualisieren:
 pip install --upgrade jupyterlab
 
 JupyterLab starten:
 jupyter lab
 
-Jupyter Notebook installieren/aktualisieren:
-pip install --upgrade notebook
-
-Jupyter Notebook starten:
-jupyter notebook
+JupyterLab über SSH:
+Um von einem Rechner A per SSH auf JupyterLab auf einem Rechner B zuzugreifen, verwendet man SSH-Port-Forwarding (Tunneling):
+Auf Rechner B:
+jupyter lab --no-browser --port=8888
+Ausgabe enthält Zeile mit Token:
+http://localhost:8888/lab?token=abc123...
+Auf Rechner A:
+ssh -N -L 8888:localhost:8888 benutzername@IP_VON_RECHNER_B
+Auf Rechner A im Browser öffnen:
+http://localhost:8888
+Token von oben eingeben oder man kopiert gleich obigen Link inkl. Token.
 -------------------------------------------------------------------------------
 
 
