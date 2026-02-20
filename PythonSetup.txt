@@ -5,7 +5,7 @@ Copyright (c) 2026 Marco Zank
 Python-Skript ausführen:
 python3 <PYTHON.PY-DATEI>
 
-Einzeiler ausführen, zum Beispiel numpy:
+Einzeiler ausführen, zum Beispiel NumPy:
 python3 -c "import numpy as np; print(np.__version__)"
 -------------------------------------------------------------------------------
 
@@ -18,6 +18,8 @@ sudo apt install python3-pip
 
 pip selbst aktualisieren:
 python3 -m pip install --upgrade pip
+oder einfacher:
+pip install --upgrade pip
 
 Installation mittels:
 pip install <PAKET>
@@ -86,13 +88,13 @@ jupyter lab
 Jupyter Notebook installieren/aktualisieren:
 pip install --upgrade notebook
 
-Jupyter Notebook straten:
+Jupyter Notebook starten:
 jupyter notebook
 -------------------------------------------------------------------------------
 
 
 -------------------------------------------------------------------------------
-PyTorch
+PyTorch: https://pytorch.org/
 
 Installation inklusive CUDA:
 pip install torch torchvision torchaudio
